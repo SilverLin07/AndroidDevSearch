@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.cpeoc.androiddevsearch"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk{
+            abiFilters 'armebai', 'armeabi-v7a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    //测试
+//    testImplementation 'junit:junit:4.12'
+//    testImplementation 'org.mockito:mockito-core:2.16.0'
+//    testImplementation "org.powermock:powermock-module-junit4:2.0.0-beta.5"
+//    testImplementation "org.powermock:powermock-module-junit4-rule:2.0.0-beta.5"
+//    testImplementation "org.powermock:powermock-api-mockito2:2.0.0-beta.5" //注意这里是mockito2
+//    testImplementation "org.powermock:powermock-classloading-xstream:2.0.0-beta.5"
+//
+//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //okhttp、rxJava、retrofit
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //react-native
+    implementation 'com.facebook.react:react-native:+'
+}
