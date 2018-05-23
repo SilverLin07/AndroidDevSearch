@@ -37,6 +37,13 @@ public class RetrofitNetUtil implements NetUtil {
     private Retrofit mRetrofit;
 
     @Override
+    public String toString() {
+        return "RetrofitNetUtil{" +
+                "baseUrl='" + baseUrl + '\'' +
+                '}';
+    }
+
+    @Override
     public void init() {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);

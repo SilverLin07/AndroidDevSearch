@@ -7,3 +7,10 @@
 /build
 /captures
 .externalNativeBuild
+.idea/caches/
+.idea/codeStyles/
+app/libs/
+app/src/main/assets/
+node_modules/
+yarn-error.log
+yarn.lock

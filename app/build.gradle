@@ -10,7 +10,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk{
-            abiFilters 'armebai', 'armeabi-v7a'
+            abiFilters 'armebai', 'armeabi-v7a', 'x86'
         }
     }
     buildTypes {
@@ -47,7 +47,4 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-
-    //react-native
-    implementation 'com.facebook.react:react-native:+'
 }
